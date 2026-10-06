@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_apps/data/pokemon_data.dart';
+import 'package:flutter_apps/models/pokemon.dart';
+import 'package:flutter_apps/widgets/pokemon_list.dart';
+import 'package:tekken_project/models/tekken.dart';
+
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+
+  final List<Tekken> pokemon = dataPokemon;
+
+  
+
+
+  // final TextField _searchController = TextField();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Tekken 8'),
+        centerTitle: true,
+        leading: Icon(Icons.arrow_back_outlined),
+        actions: [
+          Icon(Icons.favorite),
+          SizedBox(width: 10),
+        ],
+
+      ),
+      body: ListView.builder(
+        itemCount: pokemon.length,  
+        itemBuilder: (BuildContext context, int index){
+          return PokemonList(pokemon: pokemon[index]);
+        },
+      ),
+    );
+  }
+}

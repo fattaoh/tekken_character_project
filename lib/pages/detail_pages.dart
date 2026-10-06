@@ -111,7 +111,7 @@ class DetailPage extends StatelessWidget {
                   ),
                 ),
 
-                NewWidget(pokemon: pokemon),
+                NewWidget(tekken: tekken),
                 SizedBox(height: 10),
               ],
             ),
@@ -125,10 +125,10 @@ class DetailPage extends StatelessWidget {
 class NewWidget extends StatelessWidget {
   const NewWidget({
     super.key,
-    required this.pokemon,
+    required this.pokemon, required Tekken tekken,
   });
 
-  final Pokemon pokemon;
+  final Tekken tekken;
 
   @override
   Widget build(BuildContext context) {

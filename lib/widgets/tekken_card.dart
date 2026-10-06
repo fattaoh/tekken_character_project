@@ -29,9 +29,9 @@ class TekkenCard extends StatelessWidget {
         child: Column(
           children: [
             Hero(
-              tag: 'pokemon.name',
+              tag: 'tekken.name',
               child: Image.asset(
-                  'assets/pokemon.image',
+                  'assets/tekken.image',
                    fit: BoxFit.cover,
                    width: double.infinity,
                    height: 75,

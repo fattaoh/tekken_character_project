@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_apps/models/pokemon.dart';
-import 'package:flutter_apps/pages/detail_page.dart';
+import 'package:tekken_project/models/tekken.dart';
+import 'package:tekken_project/pages/detail_pages.dart';
 
-class PokemonCard extends StatelessWidget {
-  final Pokemon pokemon;
-  const PokemonCard({super.key, required this.pokemon});
+class TekkenCard extends StatelessWidget {
+  final Tekken tekken;
+  const TekkenCard({super.key, required this.tekken});
 
   @override
   Widget build(BuildContext context) {
 
     // function
-  void detailPage(Pokemon pokemon){
-    Navigator.push(context, MaterialPageRoute(builder: (_) => DetailPage(pokemon: pokemon)));
+  void detailPage(Tekken tekken){
+    Navigator.push(context, MaterialPageRoute(builder: (_) => DetailPage(tekken: tekken)));
   }
 
 
 
     return InkWell(
       onTap: (){
-        detailPage(pokemon);
+        detailPage(tekken);
       },
       child: Card(
         elevation: 6,

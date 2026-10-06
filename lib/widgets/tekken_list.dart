@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tekken_project/pages/detail_page.dart';
+import 'package:tekken_project/pages/detail_pages.dart';
 import 'package:tekken_project/models/tekken.dart';
 import 'package:tekken_project/widgets/type_chip.dart';
 

@@ -1,104 +1,84 @@
-import 'package:flutter_apps/models/pokemon.dart';
+import 'package:tekken_project/models/tekken.dart';
 
-final List<Pokemon> dataPokemon = [
-  // 1
-  Pokemon(
-    name: "Bulbasaur",
-    image: "assets/bulbasaur.jpg",
-    type: "Grass",
-    description:
-    "Ada benih tanaman di punggungnya sejak lahir. Benih tersebut perlahan tumbuh membesar seiring pertumbuhan tubuhnya.",
-    basePower: 318,
-    skills: ["Vine Whip", "Razor Leaf", "Sleep Powder", "Solar Beam"],
+final List<Tekken> dataTekken = [
+  Tekken(
+    name: 'Yoshimitsu',
+    image: 'assets/Yoshimitsu.jpg',
+    type: 'Manji Ninjutsu',
+    description: 'Pemimpin klan Manji yang bertarung dengan teknik ninjutsu dan pedang. Gaya bertarungnya sulit ditebak dan sering mengandalkan gerakan unik.',
+    basePower: 85,
+    skills: ['Flash', 'Manji Dragonfly', 'Flea', 'Sword Sweep'],
   ),
-  // 2
-  Pokemon(
-    name: "Charmander",
-    image: "assets/charmander.jpg",
-    type: "Fire",
-    description:
-    "Api di ujung ekornya menunjukkan emosi dan staminanya. Jika ia bersemangat atau marah, apinya akan berkobar lebih besar.",
-    basePower: 309,
-    skills: ["Scratch", "Ember", "Flamethrower", "Fire Spin"],
+  Tekken(
+    name: 'Steve Fox',
+    image: 'assets/Steve Fox Art - Tekken 8 Art Gallery.jpg',
+    type: 'Boxing',
+    description: 'Petinju Inggris yang mengandalkan pukulan cepat, gerakan menghindar, dan perpindahan stance untuk menekan lawannya.',
+    basePower: 86,
+    skills: ['Flicker', 'Peekaboo', 'Sonic Fang', 'Dempsey Roll'],
   ),
-  // 3
-  Pokemon(
-    name: "Dragonite",
-    image: "assets/dragonite.jpg",
-    type: "Dragon",
-    description:
-    "Pokemon yang sangat baik hati dan suka menolong kapal yang karam di laut. Ia mampu mengelilingi dunia hanya dalam waktu 16 jam.",
-    basePower: 600,
-    skills: ["Dragon Claw", "Outrage", "Hurricane", "Hyper Beam"],
+  Tekken(
+    name: 'Reina',
+    image: 'assets/Reina.jpg',
+    type: 'Taido',
+    description: 'Petarung misterius yang menggabungkan Taido dengan teknik Mishima. Gaya bertarungnya agresif dan memiliki banyak stance.',
+    basePower: 90,
+    skills: ['Sentai', 'Unsoku', 'Heaven’s Wrath', 'Electric Wind God Fist'],
   ),
-  // 4
-  Pokemon(
-    name: "Eevee",
-    image: "assets/eevee.jpg",
-    type: "Normal",
-    description:
-    "Memiliki struktur genetik yang tidak stabil dan sangat unik, memungkinkannya berevolusi menjadi berbagai wujud sesuai lingkungannya.",
-    basePower: 325,
-    skills: ["Quick Attack", "Bite", "Swift", "Take Down"],
+  Tekken(
+    name: 'King',
+    image: 'assets/King.jpg',
+    type: 'Wrestling',
+    description: 'Pegulat bertopeng jaguar yang terkenal dengan rangkaian lemparan dan teknik gulat profesional.',
+    basePower: 89,
+    skills: ['Giant Swing', 'Jaguar Step', 'Shining Wizard', 'Muscle Buster'],
   ),
-  // 5
-  Pokemon(
-    name: "Gengar",
-    image: "assets/gengar.jpg",
-    type: "Ghost",
-    description:
-    "Bersembunyi di dalam bayangan korbannya. Saat Gengar mendekat, suhu di sekelilingnya bisa mendadak turun drastis hingga terasa membeku.",
-    basePower: 500,
-    skills: ["Shadow Ball", "Sludge Bomb", "Hypnosis", "Dream Eater"],
+  Tekken(
+    name: 'Kazuya Mishima',
+    image: 'assets/Kazuya Mishima.jpg',
+    type: 'Mishima Style Karate',
+    description: 'Petarung tangguh dari keluarga Mishima yang mengandalkan karate bergaya Mishima dan kekuatan Devil Gene.',
+    basePower: 94,
+    skills: ['Wind God Fist', 'Hell Lancer', 'Demon God Fist', 'Devil Blaster'],
   ),
-  // 6
-  Pokemon(
-    name: "Jigglypuff",
-    image: "assets/jigglypuff.jpg",
-    type: "Fairy",
-    description:
-    "Mengembangkan tubuhnya untuk menyanyikan melodi merdu tanpa henti hingga membuat musuh dan siapapun di dekatnya tertidur lelap.",
-    basePower: 270,
-    skills: ["Sing", "Pound", "Disarming Voice", "Rest"],
+  Tekken(
+    name: 'Jin Kazama',
+    image: 'assets/Jin Kazama.jpg',
+    type: 'Karate',
+    description: 'Putra Kazuya dan Jun yang mengembangkan gaya karate sendiri setelah menguasai beberapa teknik dari keluarganya.',
+    basePower: 92,
+    skills: ['Electric Wind Hook Fist', 'Demon Paw', 'Zanshin', 'Devil Fist'],
   ),
-  // 7
-  Pokemon(
-    name: "Lucario",
-    image: "assets/lucario.jpg",
-    type: "Fighting",
-    description:
-    "Mampu membaca dan mengendalikan gelombang aura yang dipancarkan oleh makhluk hidup di sekitarnya untuk mendeteksi lawan dari kejauhan.",
-    basePower: 525,
-    skills: ["Aura Sphere", "Close Combat", "Bone Rush", "Force Palm"],
+  Tekken(
+    name: 'Hwoarang',
+    image: 'assets/Hwoarang.jpg',
+    type: 'Taekwondo',
+    description: 'Petarung Taekwondo asal Korea yang menggunakan tendangan cepat dan berpindah-pindah stance untuk menyerang.',
+    basePower: 88,
+    skills: ['Left Flamingo', 'Right Flamingo', 'Sky Rocket', 'Hunting Hawk'],
   ),
-  // 8
-  Pokemon(
-    name: "Pikachu",
-    image: "assets/pikachu.jpg",
-    type: "Electric",
-    description:
-    "Menyimpan listrik di dalam kantung pipinya yang berwarna merah. Ia akan melepaskan sengatan listrik bertegangan tinggi saat merasa terancam.",
-    basePower: 320,
-    skills: ["Thunderbolt", "Quick Attack", "Iron Tail", "Electro Ball"],
+  Tekken(
+    name: 'Heihachi Mishima',
+    image: 'assets/Heihachi.jpg',
+    type: 'Mishima Style Karate',
+    description: 'Kepala keluarga Mishima yang mengandalkan kekuatan fisik, serangan keras, dan karate bergaya Mishima.',
+    basePower: 93,
+    skills: ['Demon Uppercut', 'Oni Front Kick', 'Rising Sun', 'Wind God Fist'],
   ),
-  // 9
-  Pokemon(
-    name: "Snorlax",
-    image: "assets/snorlax.jpg",
-    type: "Normal",
-    description:
-    "Menghabiskan sebagian besar harinya untuk tidur dan makan hingga 400 kg makanan setiap hari. Perutnya tahan terhadap berbagai racun.",
-    basePower: 540,
-    skills: ["Body Slam", "Rest", "Snore", "Heavy Slam"],
+  Tekken(
+    name: 'Eddy Gordo',
+    image: 'assets/Eddy Gordo Art - Tekken 8 Art Gallery.jpg',
+    type: 'Capoeira',
+    description: 'Petarung Capoeira asal Brasil yang menggunakan gerakan akrobatik dan serangan berputar untuk mengacaukan lawan.',
+    basePower: 87,
+    skills: ['Handstand', 'Negativa', 'Envolta', 'Capoeira Sweep'],
   ),
-  // 10
-  Pokemon(
-    name: "Squirtle",
-    image: "assets/squirtle.jpg",
-    type: "Water",
-    description:
-    "Saat merasa terancam, ia menarik kepala dan anggota badannya ke dalam tempurung, lalu menyemprotkan air bertekanan tinggi dari mulutnya.",
-    basePower: 314,
-    skills: ["Water Gun", "Bubble", "Aqua Tail", "Hydro Pump"],
+  Tekken(
+    name: 'Armor King',
+    image: 'assets/Armor King.jpg',
+    type: 'Wrestling',
+    description: 'Pegulat bertopeng hitam yang memadukan teknik gulat dengan serangan keras dan gerakan khas jaguar.',
+    basePower: 90,
+    skills: ['Dark Upper', 'Shining Wizard', 'Black Bomb', 'Jaguar Step'],
   ),
 ];

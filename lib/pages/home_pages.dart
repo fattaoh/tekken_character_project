@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_apps/data/pokemon_data.dart';
-import 'package:flutter_apps/models/pokemon.dart';
-import 'package:flutter_apps/widgets/pokemon_list.dart';
+import 'package:tekken_project/data/tekken_data.dart';
+import 'package:tekken_project/widgets/tekken_list.dart';
 import 'package:tekken_project/models/tekken.dart';
 
 class HomePage extends StatefulWidget {
@@ -13,7 +12,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
-  final List<Tekken> pokemon = dataPokemon;
+  final List<Tekken> tekken = dataTekken;
 
   
 
@@ -34,9 +33,9 @@ class _HomePageState extends State<HomePage> {
 
       ),
       body: ListView.builder(
-        itemCount: pokemon.length,  
+        itemCount: tekken.length,  
         itemBuilder: (BuildContext context, int index){
-          return PokemonList(pokemon: pokemon[index]);
+          return TekkenList(tekken: tekken[index]);
         },
       ),
     );

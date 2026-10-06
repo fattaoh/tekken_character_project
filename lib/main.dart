@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_apps/pages/home_pages.dart';
+import 'package:tekken_project/pages/home_pages.dart';
 
 Future<void> main() async {
   runApp(const MyApp());

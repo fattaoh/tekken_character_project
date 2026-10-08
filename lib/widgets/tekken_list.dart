@@ -17,14 +17,14 @@ class TekkenList extends StatelessWidget {
     return ListTile(
       onTap: () => detailPage(tekken),
       leading: ClipRRect(
-        borderRadius: BorderRadius.circular(999),
+        borderRadius: BorderRadius.horizontal(),
         child: Hero(
             tag: 'tekken-image',
             child: Image.asset(
               tekken.image,
               width: 56,
               height: 56,
-              fit: BoxFit.cover,
+              fit: BoxFit.fitHeight,
             ),
         ),
       ),

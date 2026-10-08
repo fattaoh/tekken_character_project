@@ -3,28 +3,34 @@ import 'package:flutter/material.dart';
 
 class Difficulty extends StatelessWidget {
   final String difficulty;
-  final Widget label;
+  final Widget? label;
 
-  const Difficulty({super.key, required this.difficulty, required this.label});
+  const Difficulty({
+    super.key,
+    required this.difficulty,
+    this.label,
+  });
 
-  Color _difficultyColor(){
-    if(difficulty.contains('Easy')) return Colors.blue;
-    if(difficulty.contains('Normal')) return Colors.lightGreen;
-    if(difficulty.contains('Hard')) return Colors.orange;
-    if(difficulty.contains('Very Hard')) return Colors.red;
+  Color _difficultyColor() {
+    if (difficulty.contains('Easy')) return Colors.blue;
+    if (difficulty.contains('Normal')) return Colors.lightGreen;
+    if (difficulty.contains('Hard')) return Colors.orange;
+    if (difficulty.contains('Very Hard')) return Colors.red;
     return Colors.amber;
   }
 
   @override
   Widget build(BuildContext context) {
+    final color = _difficultyColor();
+
     return Container(
-      padding: EdgeInsets.all(8),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       decoration: BoxDecoration(
-        color: _difficultyColor().withOpacity(0.15),
+        color: color.withOpacity(0.15),
         borderRadius: BorderRadius.circular(999),
-        border: Border.all(color: Colors.amber, width: 1),
+        border: Border.all(color: color, width: 1.5),
       ),
-      child: Text(difficulty),
+      child: label ?? Text(difficulty),
     );
   }
 }

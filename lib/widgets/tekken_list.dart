@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tekken_project/pages/detail_pages.dart';
 import 'package:tekken_project/models/tekken.dart';
+import 'package:tekken_project/widgets/difficulty.dart';
 
 class TekkenList extends StatelessWidget {
   final Tekken tekken;
@@ -29,7 +30,7 @@ class TekkenList extends StatelessWidget {
         ),
       ),
       title: Text(tekken.name),
-      subtitle: Text(tekken.type),
+      subtitle: Difficulty(difficulty: tekken.difficulty, label: Text(tekken.difficulty),),
       trailing: Icon(Icons.favorite_border),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tekken_project/models/tekken.dart';
+import 'package:tekken_project/widgets/difficulty.dart';
 
 class DetailPage extends StatelessWidget {
   final Tekken tekken;
@@ -37,6 +38,7 @@ class DetailPage extends StatelessWidget {
             const SizedBox(height: 8),
             Chip(label: Text(tekken.type)),
             const SizedBox(height: 16),
+            Difficulty(label: Text(tekken.difficulty), difficulty: '',),
             Text(
               'Deskripsi',
               style: Theme.of(context).textTheme.titleMedium?.copyWith(

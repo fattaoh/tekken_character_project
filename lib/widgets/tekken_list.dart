@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tekken_project/pages/detail_pages.dart';
 import 'package:tekken_project/models/tekken.dart';
-import 'package:tekken_project/widgets/type_chip.dart';
 
 class TekkenList extends StatelessWidget {
   final Tekken tekken;
@@ -30,7 +29,7 @@ class TekkenList extends StatelessWidget {
         ),
       ),
       title: Text(tekken.name),
-      subtitle: TypeChip(type: tekken.type,),
+      subtitle: Text(tekken.type),
       trailing: Icon(Icons.favorite_border),
     );
   }

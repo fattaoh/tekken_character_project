@@ -41,6 +41,7 @@ class DetailPage extends StatelessWidget {
             Difficulty(
               difficulty: tekken.difficulty,
             ),
+            const SizedBox(height: 16,),
             Text(
               'Deskripsi',
               style: Theme.of(context).textTheme.titleMedium?.copyWith(

@@ -25,7 +25,7 @@ class DetailPage extends StatelessWidget {
                 tekken.image,
                 width: double.infinity,
                 height: 280,
-                fit: BoxFit.cover,
+                fit: BoxFit.fitHeight,
               ),
             ),
             const SizedBox(height: 16),

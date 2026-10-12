@@ -16,22 +16,29 @@ class TekkenList extends StatelessWidget {
     }
 
     return ListTile(
+      contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       onTap: () => detailPage(tekken),
       leading: ClipRRect(
-        borderRadius: BorderRadius.horizontal(),
+        borderRadius: BorderRadius.circular(18),
         child: Hero(
-            tag: 'tekken-image',
-            child: Image.asset(
-              tekken.image,
-              width: 56,
-              height: 56,
-              fit: BoxFit.fitHeight,
-            ),
+          tag: 'tekken-image-${tekken.name}',
+          child: Image.asset(
+            tekken.image,
+            width: 66,
+            height: 66,
+            fit: BoxFit.fitHeight,
+          ),
         ),
       ),
-      title: Text(tekken.name),
-      subtitle: Difficulty(difficulty: tekken.difficulty, label: Text(tekken.difficulty),),
-      trailing: Icon(Icons.favorite_border),
+      title: Text(
+        tekken.name,
+        style: const TextStyle(fontWeight: FontWeight.w700),
+      ),
+      subtitle: Difficulty(
+        difficulty: tekken.difficulty,
+        label: Text(tekken.difficulty),
+      ),
+      trailing: const Icon(Icons.favorite_border, size: 20),
     );
   }
 }

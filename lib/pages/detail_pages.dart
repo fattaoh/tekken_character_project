@@ -20,12 +20,15 @@ class DetailPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.asset(
-                tekken.image,
-                width: double.infinity,
-                height: 280,
-                fit: BoxFit.fitHeight,
+              borderRadius: BorderRadius.circular(24),
+              child: Hero(
+                tag: 'tekken-image-${tekken.name}',
+                child: Image.asset(
+                  tekken.image,
+                  width: double.infinity,
+                  height: 300,
+                  fit: BoxFit.fitHeight,
+                ),
               ),
             ),
             const SizedBox(height: 16),

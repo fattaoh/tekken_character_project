@@ -1,30 +1,44 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
 import 'package:tekken_project/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
+  testWidgets('home shows fighters and opens a fighter profile', (
+    WidgetTester tester,
+  ) async {
     await tester.pumpWidget(const MyApp());
+    await tester.pumpAndSettle();
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    expect(find.text('Pilih petarungmu'), findsOneWidget);
+    expect(find.text('Yoshimitsu'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    await tester.tap(find.text('Yoshimitsu'));
+    await tester.pumpAndSettle();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.text('Profil petarung'), findsOneWidget);
+    expect(find.text('Tentang karakter'), findsOneWidget);
+    expect(find.text('Signature moves'), findsOneWidget);
+  });
+
+  testWidgets('tapping a signature move shows controller activation help', (
+    WidgetTester tester,
+  ) async {
+    await tester.pumpWidget(const MyApp());
+    await tester.pumpAndSettle();
+
+    await tester.tap(find.text('Yoshimitsu'));
+    await tester.pumpAndSettle();
+    await tester.ensureVisible(find.text('Flash'));
+    await tester.tap(find.text('Flash'));
+    await tester.pumpAndSettle();
+
+    expect(find.text('Input: d+1+4'), findsOneWidget);
+    expect(
+      find.textContaining('Tekan D-pad ke bawah sambil menekan'),
+      findsOneWidget,
+    );
+    expect(
+      find.textContaining('1 = □ (PlayStation) / X (Xbox)'),
+      findsOneWidget,
+    );
   });
 }

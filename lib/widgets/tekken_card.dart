@@ -8,39 +8,36 @@ class TekkenCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     // function
-  void detailPage(Tekken tekken){
-    Navigator.push(context, MaterialPageRoute(builder: (_) => DetailPage(tekken: tekken)));
-  }
-
-
+    void detailPage(Tekken tekken) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (_) => DetailPage(tekken: tekken)),
+      );
+    }
 
     return InkWell(
-      onTap: (){
+      onTap: () {
         detailPage(tekken);
       },
       child: Card(
         elevation: 6,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(40),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
         clipBehavior: Clip.antiAlias,
         child: Column(
           children: [
             Hero(
               tag: 'tekken.name',
               child: Image.asset(
-                  'assets/tekken.image',
-                   fit: BoxFit.cover,
-                   width: double.infinity,
-                   height: 75,
+                'assets/tekken.image',
+                fit: BoxFit.cover,
+                width: double.infinity,
+                height: 75,
               ),
             ),
             SizedBox(height: 20),
-            
-          ]
-        )
+          ],
+        ),
       ),
     );
   }

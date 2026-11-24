@@ -8,34 +8,34 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Tekken 8',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color(0xFFFF7A1A),
+          brightness: Brightness.dark,
+          surface: const Color(0xFF171A22),
+        ),
+        scaffoldBackgroundColor: const Color(0xFF101218),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF101218),
+          foregroundColor: Color(0xFFF4F4F5),
+          elevation: 0,
+          titleTextStyle: TextStyle(
+            color: Color(0xFFF4F4F5),
+            fontSize: 16,
+            fontWeight: FontWeight.w800,
+            letterSpacing: 1.1,
+          ),
+        ),
+        iconTheme: const IconThemeData(color: Color(0xFFF4F4F5)),
       ),
-      home: HomePage(),
+      home: const HomePage(),
       debugShowCheckedModeBanner: false,
-      routes: {
-        '/home-page': (context) => HomePage(),
-      },
+      routes: {'/home-page': (context) => const HomePage()},
     );
   }
 }

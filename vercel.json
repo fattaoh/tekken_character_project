@@ -1,0 +1,11 @@
+{
+  "buildCommand": "if [ -d flutter ]; then git -C flutter pull --ff-only; else git clone https://github.com/flutter/flutter.git --depth 1 -b stable flutter; fi && ./flutter/bin/flutter config --enable-web && ./flutter/bin/flutter pub get && ./flutter/bin/flutter build web --release",
+  "outputDirectory": "build/web",
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

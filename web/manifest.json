@@ -1,11 +1,11 @@
 {
-    "name": "tekken_project",
-    "short_name": "tekken_project",
+    "name": "Tekken 8 Character List",
+    "short_name": "Tekken 8",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Daftar dan informasi karakter Tekken 8",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
